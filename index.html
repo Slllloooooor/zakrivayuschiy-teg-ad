@@ -279,7 +279,7 @@
         </div>
       </section>
 
-      <button class="save-button content-section" type="button" onclick="document.querySelector('#save-dialog').showModal();" aria-controls="save-dialog">
+      <button class="save-button content-section" type="button" onclick="window.modal.showModal();" aria-controls="modal">
         <svg class="save-button__icon" width="21" height="21">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
@@ -288,7 +288,7 @@
     </main>
 
     <!-- Модальное окно -->
-    <dialog class="dialog" id="save-dialog">
+    <dialog class="dialog" id="modal">
       <div class="dialog__content">
         <svg class="dialog__icon" width="39" height="39">
           <use href="./svg/sprite.svg#floppy"></use>
@@ -296,18 +296,15 @@
         <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
       </div>
       <form method="dialog">
-        <button class="dialog__button button" type="submit">
+        <button class="dialog__button" type="submit">
           <span class="button__text">ОК</span>
         </button>
       </form>
     </dialog>
 
-    <!-- Sprite для иконок -->
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-      <symbol id="floppy" viewBox="0 0 39 39" fill="none">
-        <!-- Содержимое из sprite.svg будет загружаться отдельно -->
-      </symbol>
-    </svg>
     <script src="./scripts/like.js"></script>
+    <script>
+      window.modal = document.getElementById('modal');
+    </script>
   </body>
 </html>
