@@ -11,4 +11,30 @@
 
   /* Ширина контентной секции */
   --content-width: clamp(375px, 50vw, 700px);
+
+  /* Цвета для анимации сердца */
+  --contour-color: #000;
+  --animation-fill-color: #FF0000;
+
+  /* Фоновое изображение */
+  --bg-image: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      var(--bg-color, #fff) 2px,
+      var(--bg-color, #fff) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      var(--bg-color, #fff) 2px,
+      var(--bg-color, #fff) 4px
+    ),
+    linear-gradient(
+      180deg,
+      var(--gradient-start, #e7e7e7) 0%,
+      var(--gradient-start, #e7e7e7) 0.01%,
+      var(--gradient-end, #1a1a1a) 100%
+    );
 }
