@@ -279,7 +279,7 @@
         </div>
       </section>
 
-      <button class="save-button content-section" type="button" onclick="window.modal.showModal();" aria-controls="modal">
+      <button class="save-button content-section" type="button" aria-controls="modal">
         <svg class="save-button__icon" width="21" height="21">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
@@ -304,7 +304,19 @@
 
     <script src="./scripts/like.js"></script>
     <script>
-      window.modal = document.getElementById('modal');
+      const modal = document.getElementById('modal');
+      const saveButton = document.querySelector('.save-button');
+      const dialogButton = document.querySelector('.dialog__button');
+
+      saveButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        modal.showModal();
+      });
+
+      dialogButton.addEventListener('click', (evt) => {
+        evt.preventDefault();
+        modal.close();
+      });
     </script>
   </body>
 </html>
