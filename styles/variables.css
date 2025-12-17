@@ -8,4 +8,7 @@
   /* Веса вариативного шрифта */
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+
+  /* Ширина контентной секции */
+  --content-width: clamp(375px, 50vw, 700px);
 }
