@@ -279,7 +279,7 @@
         </div>
       </section>
 
-      <button class="save-button content-section" type="button" aria-controls="modal">
+      <button class="save-button content-section" type="button" onclick="window['popup-id'].showModal()" aria-controls="popup-id">
         <svg class="save-button__icon" width="21" height="21">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
@@ -288,35 +288,18 @@
     </main>
 
     <!-- Модальное окно -->
-    <dialog class="dialog" id="modal">
+    <dialog class="dialog" id="popup-id">
       <div class="dialog__content">
         <svg class="dialog__icon" width="39" height="39">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
         <p class="dialog__text">Вставьте дискету,чтобы продолжить</p>
       </div>
-      <form method="dialog">
-        <button class="dialog__button" type="submit">
-          <span class="button__text">ок</span>
-        </button>
-      </form>
+      <button class="dialog__button" type="button" onclick="window['popup-id'].close()" aria-controls="popup-id">
+        <span class="button__text">ок</span>
+      </button>
     </dialog>
 
     <script src="./scripts/like.js"></script>
-    <script>
-      const modal = document.getElementById('modal');
-      const saveButton = document.querySelector('.save-button');
-      const dialogButton = document.querySelector('.dialog__button');
-
-      saveButton.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        modal.showModal();
-      });
-
-      dialogButton.addEventListener('click', (evt) => {
-        evt.preventDefault();
-        modal.close();
-      });
-    </script>
   </body>
 </html>
