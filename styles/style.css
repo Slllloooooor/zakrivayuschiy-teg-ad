@@ -194,6 +194,13 @@
   block-size: 36px;
 }
 
+/* Общий класс для кнопок */
+.button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 .card__like-button {
   min-inline-size: 130px;
   block-size: 38px;
