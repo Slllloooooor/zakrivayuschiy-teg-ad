@@ -279,23 +279,47 @@
         </div>
       </section>
 
-      <button class="memory-button button content-section" type="button" onclick="window['dialog-memory'].showModal()" aria-controls="dialog-memory">
-        <svg class="memory-icon" width="21" height="21">
-          <use href="./svg/sprite.svg#floppy"></use>
+      <button
+        class="button__popup-open button content-section"
+        type="button"
+        onclick="window['popup-id'].showModal()"
+        aria-controls="popup-id"
+      >
+        <svg
+          width="21"
+          height="21"
+          viewBox="0 0 40 40"
+          class="icon-floppy"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="svg/sprite.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
 
     <!-- Модальное окно -->
-    <dialog class="modal-window" id="dialog-memory">
-      <div class="modal-window__content">
-        <svg class="modal-icon" width="39" height="39">
-          <use href="./svg/sprite.svg#floppy"></use>
+    <dialog id="popup-id" class="popup">
+      <div class="popup__text-open">
+        <svg
+          class="floppy"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <use href="svg/sprite.svg#floppy"></use>
         </svg>
-        <p class="modal-window__text">Вставьте дискету, чтобы продолжить</p>
+        <p class="text__popup">Вставьте дискету, чтобы продолжить</p>
       </div>
-      <button class="modal-window__button button" type="button" onclick="window['dialog-memory'].close()" aria-controls="dialog-memory">
+      <button
+        class="button__popup-close button"
+        type="button"
+        onclick="window['popup-id'].close()"
+        aria-controls="popup-id"
+      >
         <span class="button__text">ок</span>
       </button>
     </dialog>
