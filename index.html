@@ -279,8 +279,8 @@
         </div>
       </section>
 
-      <button class="save-button content-section" type="button" onclick="window['popup-id'].showModal()" aria-controls="popup-id">
-        <svg class="save-button__icon" width="21" height="21">
+      <button class="memory-button button content-section" type="button" onclick="window['dialog-memory'].showModal()" aria-controls="dialog-memory">
+        <svg class="memory-icon" width="21" height="21">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
@@ -288,14 +288,14 @@
     </main>
 
     <!-- Модальное окно -->
-    <dialog class="dialog" id="popup-id">
-      <div class="dialog__content">
-        <svg class="dialog__icon" width="39" height="39">
+    <dialog class="modal-window" id="dialog-memory">
+      <div class="modal-window__content">
+        <svg class="modal-icon" width="39" height="39">
           <use href="./svg/sprite.svg#floppy"></use>
         </svg>
-        <p class="dialog__text">Вставьте дискету,чтобы продолжить</p>
+        <p class="modal-window__text">Вставьте дискету, чтобы продолжить</p>
       </div>
-      <button class="dialog__button" type="button" onclick="window['popup-id'].close()" aria-controls="popup-id">
+      <button class="modal-window__button button" type="button" onclick="window['dialog-memory'].close()" aria-controls="dialog-memory">
         <span class="button__text">ок</span>
       </button>
     </dialog>
