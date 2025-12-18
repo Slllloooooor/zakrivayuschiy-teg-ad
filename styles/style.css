@@ -177,6 +177,7 @@ main {
   font-size: 14px;
   text-shadow: -1px 0 var(--page-bg-color), 1px 0 var(--page-bg-color),
     0 -1px var(--page-bg-color), 0 1px var(--page-bg-color);
+  mix-blend-mode: hard-light;
 }
 
 /**
@@ -328,7 +329,7 @@ main {
  * Shows shadow when focused via keyboard
  */
 .button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+  box-shadow: 2px 2px 0px 0px var(--color);
 }
 
 /**
@@ -518,7 +519,7 @@ main {
   (text-stroke: 1px var(--page-bg-color)) or
     (-webkit-text-stroke: 1px var(--page-bg-color))
 ) {
-  .card__watermark {
+  .card__label {
     text-shadow: none;
     text-stroke: 1px var(--page-bg-color);
     -webkit-text-stroke: 1px var(--page-bg-color);

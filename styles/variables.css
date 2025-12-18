@@ -38,6 +38,12 @@
   --contour-color: #000;
 
   /**
+   * Theme main color - used for like icon contours
+   * References primary color
+   */
+  --themes-main-color: var(--color);
+
+  /**
    * Button text color - ensures readability on button backgrounds
    * Default: White (#fff)
    */
