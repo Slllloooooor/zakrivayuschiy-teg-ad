@@ -53,3 +53,8 @@ closeBtn?.addEventListener('click', (e) => {
   e.preventDefault();
   dialog?.close();
 });
+
+window.addEventListener('beforeunload', () => console.log('beforeunload: будет уход/перезагрузка'));
+window.addEventListener('unload', () => console.log('unload: страница выгружается'));
+window.addEventListener('pageshow', (e) => console.log('pageshow', { persisted: e.persisted }));
+
