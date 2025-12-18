@@ -1,6 +1,4 @@
 Ссылки:
 
-Репозиторий проекта: https://github.com/AyratFaradzhov/zakrivayuschiy-teg-f.git
-Проект опубликованный в gh-pages: https://ayratfaradzhov.github.io/zakrivayuschiy-teg-f/
-
-
+Репозиторий проекта: https://github.com/Slllloooooor/zakrivayuschiy-teg-ad.git
+Проект опубликованный в gh-pages: https://Slllloooooor.github.io/zakrivayuschiy-teg-ad/
