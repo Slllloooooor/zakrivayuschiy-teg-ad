@@ -1,16 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: "inter-Variable", sans-serif;
-  --accent-font: "PresStart2P", sans-serif;
-  --font-weight-bold: 700;
-  --font-weight-regular: 400;
-  --Themes-background: #FFFFFF;
-  --Themes-mainColor: #000000;
-  --background-color: repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
-  repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px ),
-  linear-gradient(to bottom, #e7e7e7, #1a1a1a);
-  --heart-contour: black;
-  --heart-main-body:#FF0000;
-  --heart-core:white;
-  --heart-sparks: #FF0000;
+  --color: #000;
+  --cover: repeating-linear-gradient(to left, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  --hero-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  --font-accent: "PressStart2P";
+  --page-bg-color: #fff;
+  --wght: 410;
+  --card-title-wght: 715;
+  --font-base: "Inter-Variable";
+  --border-color: var(--color);
+  --font-size: 18px;
+  --hero-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  --button-size: 14px;
+  --contour-color: #000;
+  --button-text-color: #fff;
+  --button-fill-color: #000;
+  --animation-fill-color: #ff0000;
 }
