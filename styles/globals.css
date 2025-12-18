@@ -1,17 +1,43 @@
-/* В этом файле уже написаны некоторые базовые стили, которые сбрасывают или преобразуют дефольное браузерное поведение.
-Здесь же лежит утилитарный класс visually-hidden на случай, если нужно скрыть какой-то элемент, но оставить доступным для скринридера.
-Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
+/**
+ * Global Reset Styles
+ *
+ * This file contains CSS reset rules to normalize browser default behavior
+ * and provide consistent cross-browser baseline styles.
+ */
 
+/* ========================================
+   Box Model Reset
+   ======================================== */
+
+/**
+ * Apply border-box to all elements for predictable sizing
+ * This makes padding and border included in element's total width/height
+ */
 *,
-*::after,
-*::before {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+/* ========================================
+   Document Reset
+   ======================================== */
+
+/**
+ * Remove default body margin for consistent edge-to-edge layout
+ */
 body {
   margin: 0;
 }
 
+/* ========================================
+   Typography Reset
+   ======================================== */
+
+/**
+ * Remove default margins and padding from all heading and text elements
+ * Provides clean slate for custom spacing
+ */
 h1,
 h2,
 h3,
@@ -26,10 +52,21 @@ li {
   padding: 0;
 }
 
+/**
+ * Links inherit color from parent for easier theming
+ */
 a {
   color: inherit;
 }
 
+/* ========================================
+   Form Elements Reset
+   ======================================== */
+
+/**
+ * Reset form controls to inherit typography and remove default spacing
+ * Ensures consistent styling across different browsers
+ */
 button,
 input {
   margin: 0;
@@ -39,11 +76,26 @@ input {
   font-size: inherit;
 }
 
+/* ========================================
+   List Reset
+   ======================================== */
+
+/**
+ * Remove default list styling for custom list implementations
+ */
 ul,
 ol {
   list-style: none;
 }
 
+/* ========================================
+   Accessibility Utilities
+   ======================================== */
+
+/**
+ * Visually hide element while keeping it accessible to screen readers
+ * Use for labels, skip links, and other semantic content that shouldn't be visible
+ */
 .visually-hidden {
   position: absolute;
   inline-size: 1px;

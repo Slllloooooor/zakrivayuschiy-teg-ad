@@ -1,27 +1,136 @@
-/* Global CSS custom properties */
+/**
+ * CSS Custom Properties (Variables)
+ *
+ * This file defines all CSS custom properties used throughout the project.
+ * Variables are organized into logical groups for easier maintenance.
+ *
+ * Variable naming convention: --category-property-modifier
+ * All variables must be defined in :root for global scope
+ */
+
 :root {
-  /* Colors */
+  /* ========================================
+     Color Palette
+     ======================================== */
+
+  /**
+   * Primary color - used for text, borders, and UI elements
+   * Default: Black (#000)
+   */
   --color: #000;
+
+  /**
+   * Page background color
+   * Default: White (#fff)
+   */
   --page-bg-color: #fff;
-  --contour-color: #000;
-  --button-text-color: #fff;
-  --button-fill-color: #000;
-  --animation-fill-color: #ff0000;
+
+  /**
+   * Border color - references primary color
+   * Used for card borders, buttons, and decorative elements
+   */
   --border-color: var(--color);
 
-  /* Typography */
+  /**
+   * Contour color - used for SVG icon outlines
+   * Default: Black (#000)
+   */
+  --contour-color: #000;
+
+  /**
+   * Button text color - ensures readability on button backgrounds
+   * Default: White (#fff)
+   */
+  --button-text-color: #fff;
+
+  /**
+   * Button fill color - used for button hover state backgrounds
+   * Default: Black (#000)
+   */
+  --button-fill-color: #000;
+
+  /**
+   * Animation fill color - used for like icon animations
+   * Default: Red (#ff0000)
+   */
+  --animation-fill-color: #ff0000;
+
+  /* ========================================
+     Typography System
+     ======================================== */
+
+  /**
+   * Base font family - variable font for body text
+   * Font: Inter Variable (supports weight range)
+   * Fallback: sans-serif
+   */
   --font-base: "Inter-Variable";
+
+  /**
+   * Accent font family - pixel font for headings and decorative text
+   * Font: Press Start 2P
+   * Fallback: fantasy
+   */
   --font-accent: "PressStart2P";
+
+  /**
+   * Base font size for body text
+   * Default: 18px
+   */
   --font-size: 18px;
+
+  /**
+   * Font size for buttons
+   * Default: 14px
+   */
   --button-size: 14px;
+
+  /**
+   * Font weight for body text (variable font setting)
+   * Default: 410 (slightly lighter than regular)
+   */
   --wght: 410;
+
+  /**
+   * Font weight for card titles (variable font setting)
+   * Default: 715 (bold)
+   */
   --card-title-wght: 715;
 
-  /* Layout */
+  /* ========================================
+     Responsive Layout Values
+     ======================================== */
+
+  /**
+   * Hero title font size - fluid typography
+   * Min: 3.0625rem (49px)
+   * Max: 4.0625rem (65px)
+   * Formula: clamp(min, preferred, max)
+   */
   --hero-title: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+
+  /**
+   * Hero subtitle font size - fluid typography
+   * Min: 0.875rem (14px)
+   * Max: 1.4375rem (23px)
+   * Formula: clamp(min, preferred, max)
+   */
   --hero-subtitle: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
 
-  /* Background */
+  /* ========================================
+     Background Gradients
+     ======================================== */
+
+  /**
+   * Complex layered background pattern
+   *
+   * Layer 1: Horizontal repeating stripes (2px gray, 2px transparent)
+   * Layer 2: Vertical repeating stripes (2px gray, 2px transparent)
+   * Layer 3: Vertical gradient (light gray to dark gray)
+   *
+   * Creates a grid pattern with darkening effect from top to bottom
+   * Applied with background-attachment: fixed for parallax effect
+   */
   --cover: repeating-linear-gradient(to left, #d3d3d3 0 2px, #d3d3d300 2px 4px),
     repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
     linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);

@@ -1,186 +1,340 @@
-/* Base page styles */
+/**
+ * Main Stylesheet
+ *
+ * This file contains all component styles for the project.
+ * Organized by component hierarchy from top to bottom of the page.
+ *
+ * Table of Contents:
+ * 1. Base Page Styles
+ * 2. Header & Hero Section
+ * 3. Main Content Container
+ * 4. Card Components
+ * 5. Image Styles & Filters
+ * 6. Typography
+ * 7. Button Components
+ * 8. Dialog Modal
+ * 9. Progressive Enhancement
+ * 10. Media Queries
+ */
+
+/* ========================================
+   1. Base Page Styles
+   ======================================== */
+
+/**
+ * Page container - establishes grid layout and background
+ * Uses logical properties for better i18n support
+ */
 .page {
   display: grid;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding-block-start: 100px;
+
+  /* Typography */
   color: var(--color);
   font-family: var(--font-base), sans-serif;
-  font-variation-settings: "wght" var(--wght);
   font-size: var(--font-size);
-  background-image: var(--cover);
-  background-attachment: fixed;
-  background-size: cover;
+  font-variation-settings: "wght" var(--wght);
+
+  /* Background with fixed attachment for parallax effect */
   background-color: var(--page-bg-color);
-  padding-block-start: 100px;
+  background-image: var(--cover);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-/* Header section */
+/* ========================================
+   2. Header & Hero Section
+   ======================================== */
+
+/**
+ * Header wrapper - contains hero section
+ * Grid layout for vertical alignment
+ */
 .header {
   display: grid;
   width: 100%;
 }
 
+/**
+ * Welcome banner - decorative header container
+ * Centered with max-width constraint
+ */
 .welcome {
-  border: 2px solid var(--contour-color);
-  background-color: var(--page-bg-color);
   max-inline-size: 696px;
   margin: 0 auto;
+  background-color: var(--page-bg-color);
+  border: 2px solid var(--contour-color);
 }
 
+/**
+ * Title decorator - large logo-style text at top of hero
+ * Responsive spacing with clamp() for fluid design
+ */
 .title__decor {
   display: block;
+  margin-block-start: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  margin-block-end: 20px;
   font-family: var(--font-accent), fantasy;
   font-size: var(--hero-title);
-  margin-block-start: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  text-align: center;
   align-items: center;
   justify-content: center;
-  margin-block-end: 20px;
-  text-align: center;
 }
 
+/**
+ * Hero title - main heading with uppercase styling
+ * Responsive bottom margin matches top spacing of title decorator
+ */
 .hero__title {
   display: grid;
   max-inline-size: 696px;
   width: 100%;
+  margin-block-end: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  font-family: var(--font-accent), fantasy;
   font-size: var(--hero-subtitle);
   text-align: center;
-  align-content: center;
-  font-family: var(--font-accent), fantasy;
   text-transform: uppercase;
-  margin-block-end: clamp(122px, calc(0.00751 * 100vw + 119.18px), 130px);
+  align-content: center;
 }
 
-/* Main content */
+/* ========================================
+   3. Main Content Container
+   ======================================== */
+
+/**
+ * Main content wrapper
+ * Grid layout with gap for consistent card spacing
+ */
 main {
   display: grid;
   margin-block: 100px;
   gap: 50px;
 }
 
-/* Card styles */
+/* ========================================
+   4. Card Components
+   ======================================== */
+
+/**
+ * Card container - individual content cards
+ * Grid layout for structured content flow
+ */
 .card {
   display: grid;
   max-inline-size: 696px;
+  margin-inline: auto;
   background-color: var(--page-bg-color);
   border: 2px solid var(--border-color);
-  margin-inline: auto;
 }
 
-.card__cover-image {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  aspect-ratio: 1/1;
+/**
+ * Card title - heading for each card
+ * Bold weight using variable font settings
+ */
+.card__title {
+  padding: 2px 10px;
+  font-family: var(--font-base), sans-serif;
+  font-size: var(--font-size);
+  font-variation-settings: "wght" var(--card-title-wght);
+  border-block-end: 2px solid var(--border-color);
 }
 
-/* Image filters */
-.photo-sepia {
-  filter: sepia(1);
-}
-.photo-bw {
-  filter: grayscale(1);
-}
-.photo-contrast {
-  filter: contrast(1.5);
-}
-.photo-blur {
-  filter: blur(3px);
-}
-.photo-bright {
-  filter: brightness(1.3);
-}
-.photo-saturate {
-  filter: saturate(2);
-}
-.photo-hue {
-  filter: hue-rotate(90deg) saturate(1.5);
-}
-
+/**
+ * Card cover - image container with relative positioning
+ * Serves as positioning context for watermark label
+ */
 .card__cover {
   position: relative;
 }
 
-.card__title {
-  font-variation-settings: "wght" var(--card-title-wght);
-  padding: 2px 10px;
-  font-family: var(--font-base), sans-serif;
-  font-size: var(--font-size);
-  border-block-end: 2px solid var(--border-color);
+/**
+ * Card cover image - responsive image with aspect ratio lock
+ * Object-fit ensures proper scaling without distortion
+ */
+.card__cover-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
 }
 
-.card__watermark {
+/**
+ * Card watermark/label - decorative text overlay on images
+ * Positioned absolutely in top-right corner
+ * Uses text-shadow for visibility (fallback) and mix-blend-mode for effect
+ */
+.card__label {
   position: absolute;
   top: 25px;
   right: 25px;
+  opacity: 0.5;
+  color: var(--color);
   font-family: var(--font-accent), fantasy;
+  font-size: 14px;
   text-shadow: -1px 0 var(--page-bg-color), 1px 0 var(--page-bg-color),
     0 -1px var(--page-bg-color), 0 1px var(--page-bg-color);
-  font-size: 14px;
-  color: var(--color);
-  opacity: 0.5;
 }
 
+/**
+ * Card details section - contains text content and buttons
+ * Grid layout with consistent internal spacing
+ */
 .card__details {
   display: grid;
-  font-family: var(--font-base), sans-serif;
-  border-block-start: 2px solid var(--border-color);
-  padding: 25px;
   gap: 25px;
+  padding: 25px;
+  border-block-start: 2px solid var(--border-color);
+  font-family: var(--font-base), sans-serif;
 }
 
+/**
+ * Card paragraph - body text within cards
+ * Fixed line height for consistent rhythm
+ */
 .card__paragraph {
   font-size: 18px;
   line-height: 21px;
 }
 
-/* Button styles */
-.card__icon-button {
-  display: flex;
-  background: transparent;
-  color: var(--color);
-  cursor: pointer;
-  margin: 0;
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  border-color: var(--border-color, #000);
-}
-
-.button:focus {
-  outline: none;
-}
-
-.button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
-}
-
+/**
+ * Card button container - houses like icon and like button
+ * Flexbox for horizontal alignment
+ */
 .card__button {
   display: flex;
   gap: 5px;
   justify-content: end;
 }
 
-.button {
-  box-sizing: border-box;
+/* ========================================
+   5. Image Styles & Filters
+   ======================================== */
+
+/**
+ * Image filter classes
+ * Each class applies a different CSS filter effect
+ * Minimum 7 different filters, one is multiple (photo-hue)
+ */
+
+/* Sepia tone effect - vintage appearance */
+.photo-sepia {
+  filter: sepia(1);
+}
+
+/* Black and white effect - grayscale conversion */
+.photo-bw {
+  filter: grayscale(1);
+}
+
+/* Enhanced contrast - darker darks, lighter lights */
+.photo-contrast {
+  filter: contrast(1.5);
+}
+
+/* Blur effect - soft focus */
+.photo-blur {
+  filter: blur(3px);
+}
+
+/* Brightness adjustment - lighter overall tone */
+.photo-bright {
+  filter: brightness(1.3);
+}
+
+/* Saturation boost - more vibrant colors */
+.photo-saturate {
+  filter: saturate(2);
+}
+
+/* Multiple filters - hue rotation + saturation (compound effect) */
+.photo-hue {
+  filter: hue-rotate(90deg) saturate(1.5);
+}
+
+/* ========================================
+   6. Typography
+   ======================================== */
+
+/* Typography styles are primarily handled via variables
+   and applied in component-specific rules above */
+
+/* ========================================
+   7. Button Components
+   ======================================== */
+
+/**
+ * Icon button - wraps the heart SVG icon
+ * Transparent background with border transition for focus state
+ * CRITICAL CLASS: Required by like.js - do not rename
+ */
+.card__icon-button {
   display: flex;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 2px solid transparent;
+  color: var(--color);
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/**
+ * Icon button focus - removes default outline
+ * Custom focus styling applied via :focus-visible below
+ */
+.card__icon-button:focus {
+  outline: none;
+}
+
+/**
+ * Icon button focus-visible - keyboard navigation indicator
+ * Shows border when focused via keyboard
+ */
+.card__icon-button:focus-visible {
+  border-color: var(--border-color, #000);
+}
+
+/**
+ * Generic button - base styles for all clickable buttons
+ * Relative positioning for pseudo-element animation
+ */
+.button {
   position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
+  padding: 0;
   border: 2px solid var(--border-color);
   background: var(--button-text-color);
+  cursor: pointer;
+  box-sizing: border-box;
   transition: box-shadow 0.3s ease;
 }
 
+/**
+ * Button focus - removes default outline
+ */
+.button:focus {
+  outline: none;
+}
+
+/**
+ * Button focus-visible - keyboard navigation indicator
+ * Shows shadow when focused via keyboard
+ */
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+}
+
+/**
+ * Button pseudo-element - creates sliding fill effect
+ * Animated from left to right on hover
+ */
 .button::before {
   content: "";
   position: absolute;
@@ -192,69 +346,147 @@ main {
   transition: width 0.5s ease-in-out;
 }
 
-.button .button__text {
+/**
+ * Button text wrapper - enables mix-blend-mode effect
+ * CRITICAL CLASS: Required by like.js - do not rename
+ */
+.button__text {
+  color: var(--button-text-color);
+  font-family: var(--font-accent), fantasy;
+  font-size: var(--button-size);
+  mix-blend-mode: difference;
   transition: color 0.5s ease-in-out;
 }
 
+/**
+ * Button hover state - expands pseudo-element to full width
+ */
 .button:hover::before {
   width: 100%;
 }
 
-.card__like-button {
-  width: 130px;
-  min-height: 38px;
-}
-
-.button__text {
-  font-size: var(--button-size);
-  color: var(--button-text-color);
-  font-family: var(--font-accent), fantasy;
-  mix-blend-mode: difference;
-}
-
+/**
+ * Button text on hover - maintains color via mix-blend-mode
+ */
 .button:hover .button__text {
   color: var(--button-text-color);
 }
 
+/**
+ * Button SVG icons - applies mix-blend-mode to icons
+ * White stroke with difference blend for color inversion effect
+ */
 .button svg {
   stroke: white;
   mix-blend-mode: difference;
 }
 
+/**
+ * Button SVG on hover - maintains color
+ */
 .button:hover svg {
   color: var(--button-text-color);
 }
 
+/**
+ * Like button - specific sizing for card like button
+ * CRITICAL CLASS: Required by like.js - do not rename
+ */
+.card__like-button {
+  width: 130px;
+  min-height: 38px;
+}
+
+/* ========================================
+   8. Save Button & Dialog
+   ======================================== */
+
+/**
+ * Save section - container for save button
+ * Centered layout
+ */
 .save {
   display: flex;
   justify-content: center;
 }
 
+/**
+ * Save button - triggers dialog modal
+ * Contains icon and text
+ */
 .save__button {
   min-height: 55px;
   gap: 8px;
   padding: 15px 20px;
 }
 
-/* Dialog modal */
-.dialog[open] {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  max-width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
-  min-width: 341px;
-  padding-block: 30px;
-  padding-inline: clamp(30px, calc(43.52px - 0.939vw), 40px);
-  position: fixed;
-  background-color: var(--page-bg-color);
-  border: 2px solid var(--color);
+/**
+ * Dialog base state - hidden by default
+ * Required to properly toggle display property
+ */
+.dialog {
+  display: none;
 }
 
+/**
+ * Dialog open state - shown when opened
+ * Grid layout for structured content
+ */
+.dialog[open] {
+  display: grid;
+  position: fixed;
+  min-width: 341px;
+  max-width: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
+  padding-block: 30px;
+  padding-inline: clamp(30px, calc(43.52px - 0.939vw), 40px);
+  background-color: var(--page-bg-color);
+  border: 2px solid var(--color);
+  justify-content: center;
+  align-items: center;
+}
+
+/**
+ * Dialog backdrop - semi-transparent overlay
+ * Dims background when dialog is open
+ */
 .dialog::backdrop {
   opacity: 0.75;
   background: var(--color);
 }
 
+/**
+ * Dialog container - internal layout structure
+ */
+.dialog__container {
+  display: grid;
+  gap: 30px;
+}
+
+/**
+ * Dialog message - contains icon and text
+ */
+.dialog__message {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-accent), fantasy;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+/**
+ * Dialog message SVG - floppy disk icon sizing
+ */
+.dialog__message svg {
+  width: 39px;
+  height: 39px;
+  inline-size: 80px;
+}
+
+/**
+ * Dialog title - message text styling
+ */
 .dialog__title {
   display: flex;
   font-family: var(--font-accent), fantasy;
@@ -263,81 +495,102 @@ main {
   text-transform: uppercase;
 }
 
-.dialog__container {
-  display: grid;
-  gap: 30px;
-}
-
+/**
+ * Dialog button - OK button to close dialog
+ */
 .dialog__button {
   display: flex;
-  justify-content: center;
   inline-size: 100%;
   min-height: 38px;
   padding: 0px 0px;
-}
-
-.dialog__message {
-  display: flex;
-  font-family: var(--font-accent), fantasy;
-  font-size: 14px;
-  line-height: 150%;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
 }
 
-.dialog__message svg {
-  width: 39px;
-  height: 39px;
-  inline-size: 80px;
-}
+/* ========================================
+   9. Progressive Enhancement
+   ======================================== */
 
-/* Progressive enhancement for text stroke */
+/**
+ * Text stroke support detection
+ * Replaces text-shadow with cleaner text-stroke when supported
+ */
 @supports (
   (text-stroke: 1px var(--page-bg-color)) or
     (-webkit-text-stroke: 1px var(--page-bg-color))
 ) {
   .card__watermark {
-    -webkit-text-stroke: 1px var(--page-bg-color);
     text-shadow: none;
     text-stroke: 1px var(--page-bg-color);
+    -webkit-text-stroke: 1px var(--page-bg-color);
   }
 }
 
+/**
+ * Mix-blend-mode support detection
+ * Disables transition when blend mode is supported for better performance
+ */
 @supports (mix-blend-mode: difference) {
   .button .button__text {
     transition: none;
   }
 }
 
-/* Responsive styles */
+/* ========================================
+   10. Responsive Styles
+   ======================================== */
+
+/**
+ * Mobile and tablet breakpoint
+ * Adjustments for screens 768px and below
+ */
 @media (max-width: 768px) {
+  /**
+   * Hero title - maintains responsive font size
+   */
   .hero__title {
     font-size: var(--hero-subtitle);
   }
 
+  /**
+   * Title decorator - maintains responsive font size
+   */
   .title__decor {
     font-size: var(--hero-title);
   }
 
+  /**
+   * Save button - stacks icon and text vertically
+   */
   .save__button {
     flex-direction: column;
   }
 
+  /**
+   * Button icon - smaller size for mobile
+   */
   .button__icon {
     width: 25px;
     height: 25px;
   }
 
+  /**
+   * Dialog icon - adjusted size for mobile
+   */
   .dialog__icon {
     width: 28px;
     height: 28px;
   }
 
+  /**
+   * Dialog - adjusted padding for mobile
+   */
   .dialog[open] {
     padding: 30px 40px;
   }
 
+  /**
+   * Dialog message SVG - larger size for mobile
+   */
   .dialog__message svg {
     width: 39px;
     height: 39px;

@@ -1,27 +1,44 @@
-/* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
+/**
+ * Animation Styles
+ *
+ * This file contains all keyframe animations and interactive states for the like icon.
+ *
+ * CRITICAL: The following class names are required by JavaScript and must not be changed:
+ *   - like-icon: SVG heart icon wrapper
+ *   - card__like-button: Like button next to the icon
+ *   - card__icon-button: Button wrapping the icon
+ *   - is-liked: State class for liked icon
+ *   - button__text: Text element inside buttons
+ */
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+/* ========================================
+   Keyframe Animations
+   ======================================== */
 
-*/
-
+/**
+ * Heart beat animation - scales heart from 1 to 1.5 and back
+ * Triggered when like icon is clicked (is-liked class applied)
+ * Duration: 0.5s, Timing: ease-in-out, Alternate direction
+ */
 @keyframes heartBeat {
   0% {
     transform: scale(1);
   }
+
   95% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
 }
 
+/**
+ * Sparks animation - fades in spark elements around the heart
+ * Triggered on like with 0.3s delay
+ * Duration: 0.3s, Timing: ease-in, Alternate direction
+ */
 @keyframes sparks {
   0% {
     fill: transparent;
@@ -32,62 +49,134 @@
   }
 }
 
+/* ========================================
+   Like Icon: Hover States
+   ======================================== */
+
+/**
+ * Main body fill on hover
+ * Delay: 0.05s to create sequential fill effect after core
+ */
 .like-icon:hover .main-body {
   fill: var(--contour-color, #000);
   transition: fill 0.3s 0.05s linear;
 }
 
+/**
+ * Core (center) fill on hover
+ * No delay - fills first
+ */
 .like-icon:hover .core {
   fill: var(--contour-color, #000);
   transition: fill 0.3s linear;
 }
 
+/* ========================================
+   Like Icon: Active States (Click and Hold)
+   ======================================== */
+
+/**
+ * Main body fill when icon is being clicked
+ * Uses red animation color with slight delay
+ */
 .like-icon:active .main-body {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s 0.05s linear;
 }
 
+/**
+ * Core fill when icon is being clicked
+ * Uses red animation color, no delay
+ */
 .like-icon:active .core {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s linear;
 }
 
+/* ========================================
+   Like Icon: Default States (Transitions Out)
+   ======================================== */
+
+/**
+ * Core transition when reverting from hover
+ * Small delay to create smooth sequential fade-out
+ */
 .like-icon .core {
   transition: fill 0.3s 0.03s linear;
 }
 
+/**
+ * Main body transition when reverting from hover
+ * No delay - fades out first
+ */
 .like-icon .main-body {
   transition: fill 0.3s linear;
 }
 
+/* ========================================
+   Like Icon: Liked State (Permanent)
+   ======================================== */
+
+/**
+ * Core fill when liked
+ * Red fill with standard transition
+ */
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s linear;
 }
 
+/**
+ * Main body fill when liked
+ * Red fill with slight delay for sequential effect
+ */
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s 0.05s linear;
 }
 
+/**
+ * Contour (outline) default transition
+ * Quick transition for reverting from liked state
+ */
 .like-icon .contour {
   transition: fill 0.1s linear;
 }
 
+/**
+ * Contour fill when liked
+ * Red fill with delay to happen after core and main-body
+ */
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color, #ff0000);
   transition: fill 0.3s 0.06s linear;
 }
 
+/**
+ * Sparks animation when liked
+ * Appears with 0.3s delay after other elements fill
+ */
 .like-icon.is-liked .sparks {
   transform-origin: center;
   animation: sparks 0.3s 0.3s ease-in alternate;
 }
 
+/* ========================================
+   Button States
+   ======================================== */
+
+/**
+ * Like button active state
+ * Shadow animation on click
+ */
 .card__like-button:active {
   animation: box-shadow 0.3s ease;
 }
 
+/**
+ * Heart beat animation trigger
+ * Scales entire icon when liked state is applied
+ */
 .like-icon.is-liked {
   animation: heartBeat 0.5s ease-in-out alternate;
 }

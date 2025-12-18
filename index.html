@@ -3,22 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Проект о рефлексии учебного пути в веб-разработке" />
     <title>Закрывающий тег</title>
+
+    <!-- Favicons -->
     <link rel="icon" href="./images/favicon.ico" />
     <link rel="icon" type="image/svg+xml" href="./svg/favicon.svg" />
     <link rel="apple-touch-icon" href="./images/favicon.png" />
+
+    <!-- Stylesheets: Fonts first, then globals, variables, components, animations -->
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
+
   <body class="page">
-    <header class="header welcome cover">
-      <span class="title__decor">&lt;/HTML&gt;</span>
+    <!-- Hero Section -->
+    <header class="header welcome cover" role="banner">
+      <span class="title__decor" aria-hidden="true">&lt;/HTML&gt;</span>
       <h1 class="hero__title">Закрывающий тег</h1>
     </header>
-    <main class="main">
+
+    <!-- Main Content: Learning Journey Cards -->
+    <main class="main" role="main">
+
+      <!-- Card 1: Getting Started -->
       <article class="card">
         <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
@@ -28,9 +39,9 @@
             loading="lazy"
             class="card__cover-image"
             src="./images/img-1.png"
-            alt="Машина"
+            alt="Начало пути в веб-разработке"
           />
-          <p class="card__label">&lt;/HTML&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;/HTML&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -83,6 +94,8 @@
           </div>
         </div>
       </article>
+
+      <!-- Card 2: Clean Slate -->
       <article class="card">
         <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__cover">
@@ -90,9 +103,9 @@
             loading="lazy"
             class="card__cover-image photo-contrast"
             src="./images/img-2.png"
-            alt="Машина"
+            alt="Первые задания и новый материал"
           />
-          <p class="card__label">&lt;/HTML&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;/HTML&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -146,6 +159,7 @@
         </div>
       </article>
 
+      <!-- Card 3: First Doubts -->
       <article class="card">
         <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__cover">
@@ -153,9 +167,9 @@
             loading="lazy"
             class="card__cover-image photo-sepia"
             src="./images/img-3.png"
-            alt="Машина"
+            alt="Сложность флексбоксов и адаптивной верстки"
           />
-          <p class="card__label">&lt;CSS&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;CSS&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -209,6 +223,7 @@
         </div>
       </article>
 
+      <!-- Card 4: Chasing Perfection -->
       <article class="card">
         <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__cover">
@@ -216,9 +231,9 @@
             loading="lazy"
             class="card__cover-image photo-bw"
             src="./images/img-4.png"
-            alt="Машина"
+            alt="Изучение Grid и позиционирования"
           />
-          <p class="card__label">&lt;desigions&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;desigions&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -272,6 +287,7 @@
         </div>
       </article>
 
+      <!-- Card 5: People Around -->
       <article class="card">
         <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__cover">
@@ -279,9 +295,9 @@
             loading="lazy"
             class="card__cover-image photo-blur"
             src="./images/img-5.png"
-            alt="Машина"
+            alt="Начало изучения JavaScript"
           />
-          <p class="card__label">care</p>
+          <p class="card__label" aria-hidden="true">care</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -335,6 +351,7 @@
         </div>
       </article>
 
+      <!-- Card 6: Alternative Strategies -->
       <article class="card">
         <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__cover">
@@ -342,9 +359,9 @@
             loading="lazy"
             class="card__cover-image photo-bright"
             src="./images/img-6.png"
-            alt="Машина"
+            alt="DOM и события в JavaScript"
           />
-          <p class="card__label">&lt;support&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;support&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -397,6 +414,8 @@
           </div>
         </div>
       </article>
+
+      <!-- Card 7: Giving Up -->
       <article class="card">
         <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__cover">
@@ -404,9 +423,9 @@
             loading="lazy"
             class="card__cover-image photo-saturate"
             src="./images/img-7.png"
-            alt="Машина"
+            alt="Работа с реальными запросами к серверу"
           />
-          <p class="card__label">&lt;lifes-style: none;&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;lifes-style: none;&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -463,6 +482,8 @@
           </div>
         </div>
       </article>
+
+      <!-- Card 8: Present Moment -->
       <article class="card">
         <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__cover">
@@ -470,9 +491,9 @@
             loading="lazy"
             class="card__cover-image photo-hue"
             src="./images/img-8.png"
-            alt="Машина"
+            alt="Финальный проект и сложная верстка"
           />
-          <p class="card__label">&lt;experience&gt;</p>
+          <p class="card__label" aria-hidden="true">&lt;experience&gt;</p>
         </div>
         <div class="card__details">
           <p class="card__paragraph">
@@ -525,11 +546,14 @@
           </div>
         </div>
       </article>
+
+      <!-- Save Button Section -->
       <article class="save">
         <button
           class="button save__button"
           type="button"
           aria-controls="dialog-save"
+          aria-label="Сохранить на память"
         >
           <svg
             class="button__icon"
@@ -545,7 +569,9 @@
         </button>
       </article>
     </main>
-    <dialog class="dialog" id="dialog-save">
+
+    <!-- Save Confirmation Dialog -->
+    <dialog class="dialog" id="dialog-save" aria-labelledby="dialog-title">
       <div class="dialog__container">
         <div class="dialog__message">
           <svg
@@ -558,15 +584,21 @@
           >
             <use href="svg/floppy.svg#floppy-dialog"></use>
           </svg>
-          <p class="dialog__title">Вставьте дискету, чтобы продолжить</p>
+          <p class="dialog__title" id="dialog-title">Вставьте дискету, чтобы продолжить</p>
         </div>
         <div>
-          <button type="button" class="button dialog__button">
+          <button
+            type="button"
+            class="button dialog__button"
+            aria-label="Закрыть диалог"
+          >
             <span class="button__text">ОК</span>
           </button>
         </div>
       </div>
     </dialog>
+
+    <!-- Scripts -->
     <script src="./scripts/like.js"></script>
   </body>
 </html>
