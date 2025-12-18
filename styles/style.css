@@ -375,18 +375,11 @@ main {
 
 /**
  * Button SVG icons - applies mix-blend-mode to icons
- * White stroke with difference blend for color inversion effect
+ * White fill with difference blend for color inversion effect
  */
 .button svg {
-  stroke: white;
+  fill: white;
   mix-blend-mode: difference;
-}
-
-/**
- * Button SVG on hover - maintains color
- */
-.button:hover svg {
-  color: var(--button-text-color);
 }
 
 /**
@@ -564,14 +557,6 @@ main {
    */
   .save__button {
     flex-direction: column;
-  }
-
-  /**
-   * Button icon - smaller size for mobile
-   */
-  .button__icon {
-    width: 25px;
-    height: 25px;
   }
 
   /**
