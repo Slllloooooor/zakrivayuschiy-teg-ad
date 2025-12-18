@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
@@ -25,7 +24,7 @@
         <li class="card">
           <article class="card__item">
             <h2 class="card__title">
-              Фритрек и нулевой спринт: Подготовка к учёбе
+              Фритрек и нулевой спринт: Подготовка к работе
             </h2>
             <div class="image__wrapper">
               <img
@@ -100,10 +99,10 @@
             </div>
             <div class="card__text-wrapper">
               <p class="card__text">
-                Первый спринт начался с изучения основ HTML и CSS. Каждый день открывал что-то новое про семантику, селекторы и каскадность стилей.
+                Первое знакомство с вебом. Разбирались с базовыми понятиями HTML и CSS.
               </p>
               <p class="card__text">
-                Это был момент, когда я впервые собрал работающую страницу своими руками. Появилось понимание, как браузер интерпретирует код.
+                Все еще не очень понятно, но интересно.
               </p>
             </div>
             <div class="card__buttons">
@@ -162,12 +161,12 @@
             </div>
             <div class="card__text-wrapper">
               <p class="card__text">
-                Второй спринт открыл мир Flexbox. Поначалу все эти justify-content, align-items и flex-direction сбивали с толку.
+                Флексбоксы оказались сложнее, чем казалось. Много времени на то, чтобы понять, как они работают.
               </p>
               <p class="card__text">
-                Но после десятка практических заданий пришло понимание. Flexbox стал моим основным инструментом для создания раскладок.
+                Адаптивная верстка — отдельная боль. Но получается.
               </p>
-            </div>
+            </div> 
             <div class="card__buttons">
               <button class="card__icon-button"
               type="button">
@@ -224,10 +223,10 @@
             </div>
             <div class="card__text-wrapper">
               <p class="card__text">
-                CSS Grid оказался еще мощнее, чем Flexbox. Возможность создавать сложные двумерные раскладки открыла новые горизонты.
+                Grid намного удобнее флексов для сложных раскладок. Позиционирование начало складываться в систему.
               </p>
               <p class="card__text">
-                Абсолютное и относительное позиционирование наконец обрело смысл. Я перестал бояться сложных макетов.
+                Стало проще понимать, какой инструмент использовать для какой задачи.
               </p>
             </div>
             <div class="card__buttons">
@@ -286,10 +285,10 @@
             </div>
             <div class="card__text-wrapper">
               <p class="card__text">
-                Переход к JavaScript был волнующим. Наконец-то код начал оживать, страницы стали интерактивными.
+                Начали изучать JavaScript. Первые скрипты, переменные, функции.
               </p>
               <p class="card__text">
-                Первые функции, циклы, условия. Каждая строка кода приближала к пониманию того, как работают веб-приложения.
+                Верстка стала оживать. Можно делать не только статику.
               </p>
             </div>
             <div class="card__buttons">
@@ -348,10 +347,10 @@
             </div>
             <div class="card__text-wrapper">
               <p class="card__text">
-                Работа с DOM открыла новый уровень. Теперь я мог манипулировать элементами страницы, создавать их динамически.
+                DOM и события — это где JS становится действительно полезным. Интерактив на страницах.
               </p>
               <p class="card__text">
-                События, обработчики, делегирование. Весь этот механизм стал понятен и логичен. Я создал первое полноценное приложение.
+                Первые обработчики событий, манипуляции с элементами. Начало что-то понимать.
               </p>
             </div>
             <div class="card__buttons">
@@ -408,13 +407,13 @@
               />
               <span class="label__text">«Wow!»</span>
             </div>
-            <div class="card__text-wrapper">
-              <p class="card__text">
-                Асинхронность показалась сложной темой. Promises, async/await, fetch - всё это требовало времени на осмысление.
-              </p>
-              <p class="card__text">
-                Но когда я получил данные из настоящего API и отобразил их на странице, это было невероятно! Приложения стали по-настоящему живыми.
-              </p>
+              <div class="card__text-wrapper">
+                <p class="card__text">
+                  Асинхронность — промисы, fetch, работа с API. Сложная тема, но очень важная.
+                </p>
+                <p class="card__text">
+                  Делали проект с реальными запросами к серверу. Круто, что все работает.
+                </p>
             </div>
             <div class="card__buttons">
               <button class="card__icon-button"
@@ -472,10 +471,10 @@
             </div>
             <div class="card__text-wrapper">
               <p class="card__text">
-                Это финальная проектная работа по вёрстке. Здесь собрано всё: от семантики HTML до сложных CSS-анимаций.
+                Финальный проект. Анимации, фильтры, сложная верстка. Все изученное собрано вместе.
               </p>
               <p class="card__text">
-                Путь был непростым, но каждый этап приносил новые знания и уверенность. Теперь я готов к новым вызовам в веб-разработке!
+                Было сложно, но получилось. Теперь можно верстать нормально.
               </p>
             </div>
             <div class="card__buttons">
@@ -524,7 +523,7 @@
       <button
         class="button__popup-open button"
         type="button"
-        onclick="document.getElementById('popup-id').showModal()"
+        onclick="window['popup-id'].showModal()"
         aria-controls="popup-id"
       >
         <svg
@@ -556,7 +555,7 @@
         <button
           class="button__popup-close button"
           type="button"
-          onclick="document.getElementById('popup-id').close()"
+          onclick="window['popup-id'].close()"
           aria-controls="popup-id"
         >
           <span class="button__text">ок</span>
