@@ -5,282 +5,524 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="color-scheme" content="light dark" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./images/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="icon" href="./images/favicon-16x16.png" type="image/png" sizes="16x16" />
-    <link rel="apple-touch-icon" href="./images/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
-    <link rel="stylesheet" href="./styles/themes.css" />
   </head>
   <body class="page">
-    <header class="header content-section">
-      <a class="header__logo" href="#">
-        &lt;/HTML&gt;
-      </a>
-      <h1 class="header__title">закрывающий тег</h1>
-      <p class="header__description">Рефлексия моего пути в обучении</p>
+    <header class="header">
+      <div class="header__wrapper header-mobile">
+        <h1 class="header__title">&lt;/HTML&gt;</h1>
+        <h2 class="header__subtitle">закрывающий тег</h2>
+      </div>
     </header>
-    <main class="main">
-      <section class="card content-section">
-        <h2 class="card__title">Фритрек и нулевой спринт: Подготовка к учёбе</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Это было»</span>
-          <img class="card__image" src="./images/card-1.png" alt="Машина на фиолетовом фоне" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Первый этап обучения начался с фритрека и нулевого спринта. Это было время знакомства с платформой и подготовки к основной программе.
-          </p>
-          <p class="card__text">
-            На этом этапе я настраивал рабочее окружение, знакомился с инструментами разработки и вспоминал основы программирования.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 2 -->
-      <section class="card content-section">
-        <h2 class="card__title">1 спринт: Погружение в HTML и CSS</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Интересно»</span>
-          <img class="card__image filter-grayscale" src="./images/card-2.png" alt="Машина на дневном фоне" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Первый спринт начался с изучения основ HTML и CSS. Каждый день открывал что-то новое про семантику, селекторы и каскадность стилей.
-          </p>
-          <p class="card__text">
-            Это был момент, когда я впервые собрал работающую страницу своими руками. Появилось понимание, как браузер интерпретирует код.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 3 -->
-      <section class="card content-section">
-        <h2 class="card__title">2 спринт: Flexbox и адаптивность</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Сложно»</span>
-          <img class="card__image filter-saturate" src="./images/card-3.png" alt="Машина на ночном фоне" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Второй спринт открыл мир Flexbox. Поначалу все эти justify-content, align-items и flex-direction сбивали с толку.
-          </p>
-          <p class="card__text">
-            Но после десятка практических заданий пришло понимание. Flexbox стал моим основным инструментом для создания раскладок.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 4 -->
-      <section class="card content-section">
-        <h2 class="card__title">3 спринт: Grid и позиционирование</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Уверенность»</span>
-          <img class="card__image filter-hue-rotate" src="./images/card-4.png" alt="Машина размытая" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            CSS Grid оказался еще мощнее, чем Flexbox. Возможность создавать сложные двумерные раскладки открыла новые горизонты.
-          </p>
-          <p class="card__text">
-            Абсолютное и относительное позиционирование наконец обрело смысл. Я перестал бояться сложных макетов.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 5 -->
-      <section class="card content-section">
-        <h2 class="card__title">4 спринт: JavaScript начало</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Прорыв»</span>
-          <img class="card__image filter-invert" src="./images/card-5.png" alt="Машина дневная" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Переход к JavaScript был волнующим. Наконец-то код начал оживать, страницы стали интерактивными.
-          </p>
-          <p class="card__text">
-            Первые функции, циклы, условия. Каждая строка кода приближала к пониманию того, как работают веб-приложения.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 6 -->
-      <section class="card content-section">
-        <h2 class="card__title">5 спринт: DOM и события</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Понимание»</span>
-          <img class="card__image filter-sepia" src="./images/card-6.png" alt="Машина зеленая" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Работа с DOM открыла новый уровень. Теперь я мог манипулировать элементами страницы, создавать их динамически.
-          </p>
-          <p class="card__text">
-            События, обработчики, делегирование. Весь этот механизм стал понятен и логичен. Я создал первое полноценное приложение.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 7 -->
-      <section class="card content-section">
-        <h2 class="card__title">6 спринт: Асинхронность и API</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Wow!»</span>
-          <img class="card__image filter-blur" src="./images/card-7.png" alt="Машина размытая космос" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Асинхронность показалась сложной темой. Promises, async/await, fetch - всё это требовало времени на осмысление.
-          </p>
-          <p class="card__text">
-            Но когда я получил данные из настоящего API и отобразил их на странице, это было невероятно! Приложения стали по-настоящему живыми.
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
-      <!-- Карточка 8 -->
-      <section class="card content-section">
-        <h2 class="card__title">Финальный проект: Закрывающий тег</h2>
-        <div class="card__image-container">
-          <span class="card__label">«Горжусь»</span>
-          <img class="card__image filter-multiple" src="./images/card-8.png" alt="Машина финальная" loading="lazy">
-        </div>
-        <div class="card__content">
-          <p class="card__text">
-            Это финальная проектная работа по вёрстке. Здесь собрано всё: от семантики HTML до сложных CSS-анимаций.
-          </p>
-          <p class="card__text">
-            Путь был непростым, но каждый этап приносил новые знания и уверенность. Теперь я готов к новым вызовам в веб-разработке!
-          </p>
-        </div>
-        <div class="card__buttons">
-          <button class="card__icon-button" type="button" aria-label="Лайк">
-            <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g class="heart">
-                <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z" fill="var(--contour-color, #000)"/>
-                <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
-                <path class="core" d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z" fill="none"/>
-              </g>
-              <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--animation-fill-color, #FF0000)"/>
-            </svg>
-          </button>
-          <button class="card__like-button button" type="button">
-            <span class="button__text">Like</span>
-          </button>
-        </div>
-      </section>
-
+    <main class="main main-mobile">
+      <ul class="cards__list">
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">
+              Фритрек и нулевой спринт: Подготовка к учёбе
+            </h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-1.png"
+                alt="Машина на фиолетовом фоне"
+                class="card__image filter__blur"
+                loading="lazy"
+              />
+              <span class="label__text">«Начало»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Первый этап обучения начался с фритрека и нулевого спринта. Это было время знакомства с платформой и подготовки к основной программе.
+              </p>
+              <p class="card__text">
+                На этом этапе я настраивал рабочее окружение, знакомился с инструментами разработки и вспоминал основы программирования.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">1 спринт: Погружение в HTML и CSS</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-2.png"
+                alt="Машина на дневном фоне"
+                class="card__image filter__brightness"
+                loading="lazy"
+              />
+              <span class="label__text">«Интересно»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Первый спринт начался с изучения основ HTML и CSS. Каждый день открывал что-то новое про семантику, селекторы и каскадность стилей.
+              </p>
+              <p class="card__text">
+                Это был момент, когда я впервые собрал работающую страницу своими руками. Появилось понимание, как браузер интерпретирует код.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">2 спринт: Flexbox и адаптивность</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-3.png"
+                alt="Машина на ночном фоне"
+                class="card__image filter__grayscale"
+                loading="lazy"
+              />
+              <span class="label__text">«Сложно»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Второй спринт открыл мир Flexbox. Поначалу все эти justify-content, align-items и flex-direction сбивали с толку.
+              </p>
+              <p class="card__text">
+                Но после десятка практических заданий пришло понимание. Flexbox стал моим основным инструментом для создания раскладок.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">3 спринт: Grid и позиционирование</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-4.png"
+                alt="Машина размытая"
+                class="card__image filter__hue-rotate"
+                loading="lazy"
+              />
+              <span class="label__text">«Уверенность»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                CSS Grid оказался еще мощнее, чем Flexbox. Возможность создавать сложные двумерные раскладки открыла новые горизонты.
+              </p>
+              <p class="card__text">
+                Абсолютное и относительное позиционирование наконец обрело смысл. Я перестал бояться сложных макетов.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">4 спринт: JavaScript начало</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-5.png"
+                alt="Машина дневная"
+                class="card__image filter__invert"
+                loading="lazy"
+              />
+              <span class="label__text">«Прорыв»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Переход к JavaScript был волнующим. Наконец-то код начал оживать, страницы стали интерактивными.
+              </p>
+              <p class="card__text">
+                Первые функции, циклы, условия. Каждая строка кода приближала к пониманию того, как работают веб-приложения.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">5 спринт: DOM и события</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-6.png"
+                alt="Машина зеленая"
+                class="card__image filter__sepia"
+                loading="lazy"
+              />
+              <span class="label__text">«Понимание»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Работа с DOM открыла новый уровень. Теперь я мог манипулировать элементами страницы, создавать их динамически.
+              </p>
+              <p class="card__text">
+                События, обработчики, делегирование. Весь этот механизм стал понятен и логичен. Я создал первое полноценное приложение.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">6 спринт: Асинхронность и API</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-7.png"
+                alt="Машина размытая космос"
+                class="card__image filter__multiple"
+                loading="lazy"
+              />
+              <span class="label__text">«Wow!»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Асинхронность показалась сложной темой. Promises, async/await, fetch - всё это требовало времени на осмысление.
+              </p>
+              <p class="card__text">
+                Но когда я получил данные из настоящего API и отобразил их на странице, это было невероятно! Приложения стали по-настоящему живыми.
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+        <li class="card">
+          <article class="card__item">
+            <h2 class="card__title">Финальный проект: Закрывающий тег</h2>
+            <div class="image__wrapper">
+              <img
+                src="./images/card-8.png"
+                alt="Машина финальная"
+                class="card__image filter__mix"
+                loading="lazy"
+              />
+              <span class="label__text">«Горжусь»</span>
+            </div>
+            <div class="card__text-wrapper">
+              <p class="card__text">
+                Это финальная проектная работа по вёрстке. Здесь собрано всё: от семантики HTML до сложных CSS-анимаций.
+              </p>
+              <p class="card__text">
+                Путь был непростым, но каждый этап приносил новые знания и уверенность. Теперь я готов к новым вызовам в веб-разработке!
+              </p>
+            </div>
+            <div class="card__buttons">
+              <button class="card__icon-button"
+              type="button">
+                <svg
+                  width="39"
+                  height="36"
+                  viewBox="0 0 39 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="like-icon"
+                >
+                  <g class="heart">
+                    <path
+                      class="contour"
+                      d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                      fill="var(--heart-contour)"
+                    />
+                    <path
+                      class="main-body"
+                      d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15 15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27 9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27 15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21 18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z"
+                      fill="none"
+                    />
+                    <path
+                      class="core"
+                      d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                      fill="none"
+                    />
+                  </g>
+                  <path
+                    class="sparks"
+                    d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33 3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z"
+                    fill="var(--heart-sparks)"
+                  />
+                </svg>
+              </button>
+              <button class="card__like-button button"
+              type="button">
+                <span class="button__text">Like</span>
+              </button>
+            </div>
+          </article>
+        </li>
+      </ul>
       <button
-        class="button__popup-open button content-section"
+        class="button__popup-open button"
         type="button"
         onclick="window['popup-id'].showModal()"
         aria-controls="popup-id"
@@ -293,37 +535,34 @@
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <use href="svg/sprite.svg#floppy"></use>
+          <use href="svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
-    </main>
-
-    <!-- Модальное окно -->
-    <dialog id="popup-id" class="popup">
-      <div class="popup__text-open">
-        <svg
-          class="floppy"
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
+      <dialog id="popup-id" class="popup">
+        <div class="popup__text-open">
+          <svg
+            class="floppy"
+            width="40"
+            height="40"
+            viewBox="0 0 40 40"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <use href="svg/floppy.svg#floppy"></use>
+          </svg>
+          <p class="text__popup">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button
+          class="button__popup-close button"
+          type="button"
+          onclick="window['popup-id'].close()"
+          aria-controls="popup-id"
         >
-          <use href="svg/sprite.svg#floppy"></use>
-        </svg>
-        <p class="text__popup">Вставьте дискету, чтобы продолжить</p>
-      </div>
-      <button
-        class="button__popup-close button"
-        type="button"
-        onclick="window['popup-id'].close()"
-        aria-controls="popup-id"
-      >
-        <span class="button__text">ок</span>
-      </button>
-    </dialog>
-
+          <span class="button__text">ок</span>
+        </button>
+      </dialog>
+    </main>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

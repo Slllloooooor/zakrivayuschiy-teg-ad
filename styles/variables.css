@@ -1,51 +1,16 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
-
-/* Дефолтные значения переменных */
 :root {
-  /* Шрифты */
-  --main-font: 'Inter Variable', sans-serif;
-  --accent-font: 'PressStart2P', fantasy;
-
-  /* Веса вариативного шрифта */
-  --font-weight-normal: 400;
+  --main-font: "inter-Variable", sans-serif;
+  --accent-font: "PresStart2P", sans-serif;
   --font-weight-bold: 700;
-
-  /* Ширина контентной секции */
-  --content-width: clamp(375px, 50vw, 700px);
-
-  /* Цвета (переопределяются в themes.css) */
-  --text-color: #000;
-  --accent-color: #000;
-  --bg-color: #fff;
-  --button-text-color: #fff;
-  --label-stroke: #fff;
-  --headings-font-weight: 700;
-  --gradient-start: #e7e7e7;
-  --gradient-end: #1a1a1a;
-
-  /* Цвета для анимации сердца */
-  --contour-color: var(--accent-color, #000);
-  --animation-fill-color: #FF0000;
-
-  /* Фоновое изображение */
-  --bg-image: repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      var(--bg-color, #fff) 2px,
-      var(--bg-color, #fff) 4px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      var(--bg-color, #fff) 2px,
-      var(--bg-color, #fff) 4px
-    ),
-    linear-gradient(
-      180deg,
-      var(--gradient-start, #e7e7e7) 0%,
-      var(--gradient-start, #e7e7e7) 0.01%,
-      var(--gradient-end, #1a1a1a) 100%
-    );
+  --font-weight-regular: 400;
+  --Themes-background: #FFFFFF;
+  --Themes-mainColor: #000000;
+  --background-color: repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px ),
+  linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  --heart-contour: black;
+  --heart-main-body:#FF0000;
+  --heart-core:white;
+  --heart-sparks: #FF0000;
 }
